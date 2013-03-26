@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="55000">
+    <setting id="feed_yifi" type="bool" label="55001" default="true"/>
+    <setting type="sep"/>
+    <setting id="feed_rls_mov" type="bool" label="55002" default="true"/>
+    <setting id="feed_rls_tv" type="bool" label="55003" default="true"/>
+    <setting type="sep"/>
+    <setting id="feed_sce_mov" type="bool" label="55004" default="true"/>
+    <setting id="feed_sce_tv" type="bool" label="55005" default="true"/>
+    <setting type="sep"/>
+    <setting id="feed_zt" type="bool" label="55006" default="true"/>
+	</category>
+	<category label="55100">
+	  <setting id="tracker_tpb" type="bool" label="55101" default="true"/>
+	  <setting id="tracker_kat" type="bool" label="55102" default="true"/>
+	</category>
+  <category label="55200">
+    <setting label="55210" type="labelenum" id="client" lvalues="55201|55202|55203"/>
+    <setting label="55220" type="bool" id="client_remote" default="false"/>
+    <setting label="55221" type="ipaddress" id="client_ip" enable="eq(-1,true)" visible="eq(-1,true)" default="127.0.0.1"/>
+    <setting label="55222" type="number" id="client_port" enable="eq(-2,true)" visible="eq(-2,true)" default="6886"/>
+  </category>
+</settings>

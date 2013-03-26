@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.torrentrss"
+       name="Torrent RSS"
+       version="1.0.0"
+       provider-name="Vivien Chene">
+  <requires>
+    <import addon="xbmc.python" version="2.0"/>
+  </requires>
+  <extension point="xbmc.python.script"
+             library="default.py" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">A Script for extracting torrent from rss feeds</summary>
+    <summary lang="fr">Un script pour extraire des torrents de flux rss</summary>
+    <description lang="en">Extract file names from rss feeds, search them on bit torrent trackers and queue it in client</description>
+    <description lang="fr">Extrait les noms de fichiers de flux rss, les recherche sur des trackers bit torrent et les ajoute au client</description>
+  </extension>
+</addon>

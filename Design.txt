@@ -1,0 +1,186 @@
+4 gui:
+- home gui: list feeds items (title/date/feed)
+    left pannel: all feeds, list feeds and allow select 1. On change update list display
+    ok : TrackerManager.search(selected feedItem.releaseName) + display resutls in torrents gui
+    back = exit
+    
+- feed item details: + ok to search, back for home gui
+- torrent gui: list search results ordered by peers
+    http://wiki.xbmc.org/index.php?title=HOW-TO_write_Python_Scripts 6.6.1 to get url and parse it
+    ok: TorrentManager.addTorrent(selected TorrentItem.MagnetUrl or TorrentUrl)
+    back: back to home gui
+- torrent item details: + ok=to dl, back = torrent gui
+
+
+init:
+new FeedManager(feed list from settings)
+new TrackerManager(enabled tracker list from settings)
+getFeedList()
+
+if a channel is selected list = sublist(list[channel]==channel)
+display list
+
+
+OBJECT:FeedItem
+---------------------------
+Title
+Url
+Description
+Channel
+Date
+
+-GetOverview()
+-GetDetails()
+
+
+OBJECT:TorrentItem
+---------------------------
+title
+Tracker object
+MagnetUrl
+TorrentUrl
+Trusted
+Seeds
+Peers
+Url
+
+-getDetails()
+    Tracker.getDetails(Url)
+
+
+OBJECT:TrackerItem
+---------------------------
+-constructor()
+-search(string)
+-getDetails(url)
+
+
+OBJECT:FeedManager
+---------------------------
+FeedItem[]   feedList
+
+-constructor(String enabledFeeds[])
+    Load cached list in feedList
+    For each feed get feed list (http://wiki.python.org/moin/RssLibraries) using multithreaded requests
+    For each list element
+        if element[bozo]=1 and (element[title]  and element[date] don't exist in feedList), append new FeedItem(feed)
+
+-FeedItem[] getFeedList() return feedList
+
+       
+OBJECT:TrackerManager
+---------------------------
+TrackerItem[] trackerList
+
+-constructor(list)
+    for each listElt from the list
+        if listElt = vuze
+            append new TorrentManager:Vuze to trackerList
+        else...
+
+-TorrentItem[] search(string)
+    TorrentItem[] torrentList
+    for each tracker from trackerList
+        tracker.search(string)
+        append to torrentList
+    return torrentList
+    
+
+OBJECT:TorrentManager
+---------------------------
+-addTorrent(TorrentItem)
+-TorrentItem[] getListing()
+
+
+OBJECT:TorrentManager:Vuze
+---------------------------
+
+OBJECT:TorrentManager:Utorrent
+---------------------------
+
+OBJECT:TorrentManager:Transmission
+---------------------------
+
+<p>
+  This article has been published at
+  <a href="http://www.rlslog.net">RLSLOG.net</a>
+  - visit our site for full content.
+</p>
+<p>
+  <img style="margin: 0pt 10px 10px 0pt;float: left" src="http://old.rapidimg.org/images/Mkopw.jpg"
+    alt="" width="200" height="280" border="0" />
+  P2P group Legend-Rg released the first DVDRip of Shadow Dancer 2012, a
+  Thriller movie, starring Clive Owen, Andrea Riseborough and Gillian
+  Anderson, directed by James Marsh &#8230; Enjoy!
+</p>
+<p>
+  <strong>Plot:</strong>
+  During an aborted bomb attempt in London, Collette falls into the hands
+  of an MI5 officer, Mac, who offers her a deal: turn informant or go to
+  prison. Fearing for her son&#8217;s welfare, she returns to Belfast
+  where betraying family and beliefs she becomes a reluctant mole for
+  British intelligence. As suspicion of Collette mounts and Mac takes
+  increasing risks to protect her, both feel the net closing in.
+</p>
+<p style="text-align: center">
+  <img src="http://old.rapidimg.org/images/gyLlq.jpg" alt="" width="520"
+    height="275" />
+</p>
+<p>
+  <strong>Genre:</strong>
+  Thriller
+  <br />
+  <strong>IMDB rating:</strong>
+  6.9/10 from 978 users
+  <br />
+  <strong>Directed by:</strong>
+  James Marsh
+  <br />
+  <strong>Starring:</strong>
+  Clive Owen, Andrea Riseborough and Gillian Anderson
+</p>
+<p>
+  <strong>Release Name:</strong>
+  Shadow.Dancer.2012.DVDRip.Xvid.AC3-Legend-Rg
+  <br />
+  <strong>Size:</strong>
+  2.28 GB
+  <br />
+  <strong>Video:</strong>
+  XviD | 720&#215;400 | 2 885 Kbps
+  <br />
+  <strong>Audio:</strong>
+  English | AC3 | 448 Kbps
+  <br />
+  <strong>Runtime:</strong>
+  1hr 37min
+  <br />
+  <strong>Subtitles:</strong>
+  <a href="http://tinysubs.com/subtitles/Shadow+Dancer+2012">SUBS</a>
+</p>
+<p>
+  <strong>Links:</strong>
+  <a href="http://nfo.rlslog.net/view/40367">NFO</a>
+  |
+  <a href="http://www.imdb.com/title/tt1770734/">iMDB</a>
+  |
+  <a href="http://www.imdb.com/video/imdb/vi712417817/">TRAiLER</a>
+  |
+  <a
+    href="http://newtorrents.info/search/Shadow.Dancer.2012.DVDRip.Xvid.AC3-Legend-Rg">NTi</a>
+</p>
+<p>
+  <strong>
+    Download
+    <strong>:</strong>
+  </strong>
+  <a
+    href="http://uploaded.net/file/vn99j65s/Shadow%20Dancer%202012%20DVDRip%20Xvid%20AC3%20Legend-Rg.avi">UPLOADED</a>
+  (SiNGLE LiNK) |
+  <a href="http://uploaded.net/f/gikplc">UPLOADED</a>
+  (SPLiT FiLE)
+</p>
+<p>
+  more at
+  <a href="http://www.rlslog.net">RLSLOG.net</a>
+</p>

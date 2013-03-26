@@ -1,0 +1,467 @@
+﻿<window>
+  <defaultcontrol always="true">504</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <views>504</views>
+  <controls>
+    <include>CommonBackground</include>
+    <include>ContentPanelBackgrounds</include>
+
+    <!-- Main window content -->
+    <control type="group">
+      <include>VisibleFadeEffect</include>
+      <control type="list" id="504">
+        <posx>70</posx>
+        <posy>78</posy>
+        <width>580</width>
+        <height>561</height>
+        <onleft>9000</onleft>
+        <onright>60</onright>
+        <onup>504</onup>
+        <ondown>504</ondown>
+        <viewtype label="$LOCALIZE[544]">list</viewtype>
+        <pagecontrol>60</pagecontrol>
+        <scrolltime>200</scrolltime>
+        <itemlayout height="40" width="580">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>580</width>
+            <height>41</height>
+            <texture border="0,2,0,2">MenuItemNF.png</texture>
+          </control>
+          <control type="label">
+            <posx>10</posx>
+            <posy>0</posy>
+            <width>47</width>
+            <height>40</height>
+            <font>font12</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <posx>60</posx>
+            <posy>0</posy>
+            <width>365</width>
+            <height>40</height>
+            <font>font12</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+          <control type="label">
+            <posx>430</posx>
+            <posy>8</posy>
+            <width>90</width>
+            <height>26</height>
+            <font>font12</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <label>$INFO[ListItem.Property(size)]</label>
+          </control>
+          <control type="label">
+            <posx>525</posx>
+            <posy>8</posy>
+            <width>50</width>
+            <height>26</height>
+            <font>font12</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <label>$INFO[ListItem.Property(peers)]</label>
+          </control>
+          <control type="image">
+            <posx>563</posx>
+            <posy>14</posy>
+            <width>16</width>
+            <height>16</height>
+            <texture>OverlayWatched.png</texture>
+            <visible>StringCompare(ListItem.Property(vip),ptrue)</visible>
+          </control>
+        </itemlayout>
+        <focusedlayout height="40" width="580">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>580</width>
+            <height>41</height>
+            <texture border="0,2,0,2">MenuItemNF.png</texture>
+            <visible>!Control.HasFocus(504)</visible>
+            <include>VisibleFadeEffect</include>
+          </control>
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>580</width>
+            <height>41</height>
+            <texture border="0,2,0,2">MenuItemFO.png</texture>
+            <visible>Control.HasFocus(504)</visible>
+            <include>VisibleFadeEffect</include>
+          </control>
+          <control type="image">
+            <posx>380</posx>
+            <posy>4</posy>
+            <width>200</width>
+            <height>33</height>
+            <texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+            <visible>Control.HasFocus(504) + !IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <posx>10</posx>
+            <posy>0</posy>
+            <width>47</width>
+            <height>40</height>
+            <font>font12</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <posx>60</posx>
+            <posy>0</posy>
+            <width>365</width>
+            <height>40</height>
+            <font>font13</font>
+            <textcolor>white</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+          <control type="label">
+            <posx>430</posx>
+            <posy>8</posy>
+            <width>90</width>
+            <height>26</height>
+            <font>font12</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <label>$INFO[ListItem.Property(size)]</label>
+          </control>
+          <control type="label">
+            <posx>525</posx>
+            <posy>8</posy>
+            <width>50</width>
+            <height>26</height>
+            <font>font12</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <label>$INFO[ListItem.Property(peers)]</label>
+          </control>
+          <control type="image">
+            <posx>563</posx>
+            <posy>14</posy>
+            <width>16</width>
+            <height>16</height>
+            <texture>OverlayWatched.png</texture>
+            <visible>StringCompare(ListItem.Property(vip),ptrue)</visible>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="scrollbar" id="60">
+        <posx>650</posx>
+        <posy>78</posy>
+        <width>25</width>
+        <height>560</height>
+        <texturesliderbackground border="10,14,10,14">ScrollBarV.png</texturesliderbackground>
+        <texturesliderbar border="10,14,10,14">ScrollBarV_bar.png</texturesliderbar>
+        <texturesliderbarfocus border="10,14,10,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+        <textureslidernib>ScrollBarNib.png</textureslidernib>
+        <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+        <onleft>504</onleft>
+        <onright>30004</onright>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+        <visible>Control.IsVisible(504)</visible>
+      </control>
+
+      <control type="group">
+        <posx>710</posx>
+        <posy>70</posy>
+        <visible>Control.IsVisible(504)</visible>
+        <control type="label"  id="40001">
+          <description>Article title</description>
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>510</width>
+          <height>25</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font13_title</font>
+          <textcolor>blue</textcolor>
+          <label>$ADDON[script.torrentrss 56210]</label>
+        </control>
+        
+        <control type="image" id="40005">
+          <posx>200</posx>
+          <posy>30</posy>
+          <width>150</width>
+          <height>150</height>
+          <texture background="true" fallback="Fanart_Fallback_Small.jpg" >Fanart_Fallback_Small.jpg</texture>
+          <aspectratio>keep</aspectratio>
+          <fadetime>IconCrossfadeTime</fadetime>
+        </control>
+        <control type="image" id="40123">
+          <posx>0</posx>
+          <posy>205</posy>
+          <width>510</width>
+          <height>4</height>
+          <texture>separator.png</texture>
+        </control>
+ 
+        <control type="label"  id="40002">
+          <posx>10</posx>
+          <posy>235</posy>
+          <width>510</width>
+          <height>25</height>
+          <label>416</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font12</font>
+        </control>
+
+        <control type="list" id="40010">
+	        <posx>0</posx>
+	        <posy>265</posy>
+	        <width>510</width>
+	        <height>230</height>
+          <orientation>vertical</orientation>
+          <viewtype label="Property list">list</viewtype>
+	        <scrolltime>200</scrolltime>
+	        <visible>True</visible>
+	        <itemlayout height="25" width="510">
+		        <control type="label">
+		          <description>Feed txt</description>
+              <posx>20</posx>
+              <posy>0</posy>
+		          <width>150</width>
+		          <height>20</height>
+              <label>$INFO[ListItem.Label]</label>
+		          <align>left</align>
+		          <aligny>center</aligny>
+		          <font>font12_title</font>
+		          <textcolor>blue</textcolor>
+		        </control>
+		        <control type="label">
+		          <posx>200</posx>
+              <posy>0</posy>
+		          <description>Feed value</description>
+		          <width>340</width>
+		          <height>20</height>
+		          <align>left</align>
+		          <aligny>center</aligny>
+		          <font>font12</font>
+		          <scroll>true</scroll>
+		          <label>$INFO[ListItem.Label2]</label>
+		        </control>
+          </itemlayout>
+          <focusedlayout height="25" width="510">        
+            <control type="label">
+              <description>Feed txt</description>
+              <posx>20</posx>
+              <posy>0</posy>
+              <width>150</width>
+              <height>20</height>
+              <label>$INFO[ListItem.Label]</label>
+              <align>left</align>
+              <aligny>center</aligny>
+              <font>font12_title</font>
+              <textcolor>blue</textcolor>
+            </control>
+            <control type="label">
+              <posx>200</posx>
+              <posy>0</posy>
+              <description>Feed value</description>
+              <width>340</width>
+              <height>20</height>
+              <align>left</align>
+              <aligny>center</aligny>
+              <font>font12</font>
+              <scroll>true</scroll>
+              <label>$INFO[ListItem.Label2]</label>
+            </control>
+          </focusedlayout>
+        </control>
+        
+        <control type="image">
+          <posx>0</posx>
+          <posy>500</posy>
+          <width>510</width>
+          <height>4</height>
+          <texture>separator.png</texture>
+        </control>
+                
+      </control>
+    </control>
+    
+    <!-- Footer content -->
+    <include>CommonPageCount</include>
+    <include>CommonNowPlaying</include>
+    <include>MainWindowMouseButtons</include>
+    <include>BehindDialogFadeOut</include>
+    <include>ScrollOffsetLabel</include>
+    
+    <!-- Header content -->
+    <!--TODO: Logo top left corner -->
+    <control type="image">
+      <description>Section header image</description>
+      <posx>20</posx>
+      <posy>3</posy>
+      <width>35</width>
+      <height>35</height>
+      <aspectratio>keep</aspectratio>
+      <texture>icon_video.png</texture>
+    </control>
+    <control type="grouplist">
+      <posx>65</posx>
+      <posy>5</posy>
+      <width>1000</width>
+      <height>30</height>
+      <orientation>horizontal</orientation>
+      <align>left</align>
+      <itemgap>5</itemgap>
+      <!-- Header title -->
+      <control type="label">
+        <include>WindowTitleCommons</include>
+        <label>$ADDON[script.torrentrss 50001]</label>
+      </control>
+      <control type="label">
+        <include>WindowTitleCommons</include>
+        <label>[COLOR=blue] - [/COLOR]$ADDON[script.torrentrss 50002]</label>
+      </control>
+    </control>
+    <include>Clock</include>
+
+    <!-- Left side blade frame -->
+    <control type="group">
+      <posx>-250</posx>
+      <!-- Frame design -->
+      <include>SideBladeLeft</include>
+
+      <!-- Frame content -->
+      <control type="image">
+         <description>LOGO</description>
+         <posx>15</posx>
+         <posy>35</posy>
+         <width>220</width>
+         <height>80</height>
+         <aspectratio>keep</aspectratio>
+         <texture>torrentrss_logo.png</texture>
+      </control>
+      <control type="grouplist" id="9000">
+        <posx>0</posx>
+        <posy>110</posy>
+        <width>250</width>
+        <height>600</height>
+        <onleft>9000</onleft>
+        <onright>504</onright>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <onback>504</onback>
+        <itemgap>0</itemgap>
+        
+       <!-- View options -->
+        <control type="label" id="200">
+          <width>250</width>
+          <height>35</height>
+          <font>font12</font>
+          <label>31006</label>
+          <textcolor>blue</textcolor>
+          <align>center</align>
+          <aligny>center</aligny>
+        </control>
+        <control type="button" id="41005">
+          <description>Sort by button</description>
+          <include>ButtonCommonValues</include>
+          <label>$ADDON[script.torrentrss 50150]$ADDON[script.torrentrss 50151]</label>
+        </control>
+        <control type="togglebutton" id="4">
+          <description>Sort asc</description>
+          <include>ButtonCommonValues</include>
+          <alttexturefocus border="5">button-focus.png</alttexturefocus>
+          <alttexturenofocus>-</alttexturenofocus>
+          <label>31051</label>
+          <altlabel>31050</altlabel>
+          <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+        </control>
+        <control type="edit" id="19">
+          <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+          <description>Filter</description>
+          <textwidth>230</textwidth>
+          <include>ButtonCommonValues</include>
+          <label>587</label>
+        </control>
+        <control type="radiobutton" id="20">
+          <visible>Container.CanFilterAdvanced</visible>
+          <description>Filter</description>
+          <include>ButtonCommonValues</include>
+          <label>587</label>
+          <selected>Container.Filtered</selected>
+          <onclick>right</onclick>
+          <onclick>Filter</onclick>
+        </control>
+
+
+        <!-- Misc options -->
+        <control type="label" id="41002">
+          <width>250</width>
+          <height>35</height>
+          <font>font12</font>
+          <label>$ADDON[script.torrentrss 50104]</label>
+          <textcolor>blue</textcolor>
+          <align>center</align>
+          <aligny>center</aligny>
+        </control>
+        <control type="button" id="41004">
+          <description>Refresh feeds button</description>
+          <include>ButtonCommonValues</include>
+          <label>$ADDON[script.torrentrss 56101]</label>
+        </control>
+
+        <!-- Feed selection -->
+        <control type="label" id="40201">
+          <width>250</width>
+          <height>35</height>
+          <font>font12</font>
+          <label>$ADDON[script.torrentrss 50101]</label>
+          <textcolor>blue</textcolor>
+          <align>center</align>
+          <aligny>center</aligny>
+        </control>
+
+        <control type="radiobutton" id="41010">
+          <textwidth>170</textwidth>
+          <include>ButtonCommonValues</include>
+          <font>font12</font>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$ADDON[script.torrentrss 50102]</label>
+        </control>
+        <control type="radiobutton" id="41011">
+          <textwidth>170</textwidth>
+          <include>ButtonCommonValues</include>
+          <font>font12</font>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$ADDON[script.torrentrss 55101]</label>
+        </control>
+        <control type="radiobutton" id="41012">
+          <textwidth>170</textwidth>
+          <include>ButtonCommonValues</include>
+          <font>font12</font>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$ADDON[script.torrentrss 55102]</label>
+        </control>
+
+
+      </control>
+    </control>
+
+  </controls>
+</window>

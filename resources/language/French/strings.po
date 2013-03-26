@@ -1,0 +1,23 @@
+# XBMC Media Center language file
+# Addon Name: Torrent RSS
+# Addon id: script.torrentrss
+# Addon version: 1.0.0
+# Addon Provider: vche
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#Misc labels
+
+msgctxt "#31000"
+msgid "Change Your"
+msgstr "Changement des"
+
+msgctxt "#31003"
+msgid "Power Options"
+msgstr "Options d'alimentation"
+
